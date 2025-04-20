@@ -1,0 +1,146 @@
+/* FONT FAMILY */
+@import url("./font.css");
+
+/* CSS RESET */
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* FONT-SIZE */
+html{
+  font-size: 62.5%;
+}
+
+/* ROOT VARIABLE */
+:root{
+  --color-primary: #FF5722;
+  --color-primary-light:#FF7A50;
+  --color-secondary-dark: #FFA589;
+  --color-secondary-light: #FFF6F2;
+  --color-navbar: #F8F8F8;
+  --color-white: #FFFFFF;
+  --color-heading-text: #000000;
+  --color-body-text: #333333;
+
+  --border-radius-xs: 2px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 5px;
+  --border-radius-lg: 8px;
+  --border-radius-4xl: 32px;
+
+}
+
+body{
+  color: var(--color-body-text);
+  font-size: 1.4rem;
+}
+
+/* ------------------------HEADING  FONT-SIZE */
+h1,
+h2,
+h3{
+  color: var(--color-heading-text);
+  font-weight: 700;
+}
+h1{
+  font-size: 2.5rem;
+}
+h2{
+  font-size: 2.2rem;
+}
+/* HEADING & BODY FONT-SIZE----------------------  */
+
+/* -----------------------------------------BUTTON */
+  .btn{
+    outline: 0;
+    border: 0;
+    padding: 1.9rem 2.4rem;
+    border-radius: var(--border-radius-lg);
+    cursor: pointer;
+    color: var(--color-white);
+    text-align: center;
+    white-space: nowrap;
+    margin: 1rem 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  .btn--primary{
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+  }
+  .btn--secondary{
+    background-color: var(--color-secondary-dark);
+    border: 1px solid var(--color-secondary-dark);
+  }
+  .btn--block{
+    width: 100%;
+    font-size: 1.6rem;
+  }
+
+/* END BUTTON------------------------------------ */
+
+
+/* -----------------------------------------BADGE */
+  .badge{
+    display: inline-flex;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius-4xl);
+    padding: 1rem 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+  }
+  .badge__number{
+    order: 1;
+    padding-right: 0.5rem;
+  }
+  .badge__text{
+    padding-left: 0.5rem;
+  }
+  .badge--primary{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  
+  }
+  .badge--secondary{
+    background-color: var(--color-white);
+    color: var(--color-primary);
+  
+
+  }
+/* END BADGE------------------------------------ */
+
+/*-------------------------- MEDIA FOR FONT-SIZE */
+@media screen and (min-width: 768px){
+  body{
+    font-size: 1.8rem;
+  }
+  h1{
+    font-size: 5rem;
+  }
+  h2{
+    font-size: 3.5rem;
+  }
+  h3{
+    font-size: 2.8rem;
+  }
+  .btn{
+    font-size: 1.6rem;
+  }
+  .btn--block{
+    font-size: 2rem;
+  }
+  .badge{
+    font-size:1.4rem;
+  }
+}
+/* END MEDIA FOR FONT-SIZE---------------------- */
+
+
