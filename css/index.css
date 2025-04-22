@@ -4,27 +4,27 @@
 /* CSS RESET */
 *,
 *::before,
-*::after{
+*::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   list-style: none;
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 
 /* FONT-SIZE */
-html{
+html {
   font-size: 62.5%;
 }
 
 /* ROOT VARIABLE */
-:root{
-  --color-primary: #FF5722;
-  --color-primary-light:#FF7A50;
-  --color-secondary-dark: #FFA589;
-  --color-secondary-light: #FFF6F2;
-  --color-navbar: #F8F8F8;
-  --color-white: #FFFFFF;
+:root {
+  --color-primary: #ff5722;
+  --color-primary-light: #ff7a50;
+  --color-secondary-dark: #ffa589;
+  --color-secondary-light: #fff6f2;
+  --color-navbar: #f8f8f8;
+  --color-white: #ffffff;
   --color-heading-text: #000000;
   --color-body-text: #333333;
 
@@ -33,10 +33,9 @@ html{
   --border-radius-md: 5px;
   --border-radius-lg: 8px;
   --border-radius-4xl: 32px;
-
 }
 
-body{
+body {
   color: var(--color-body-text);
   font-size: 1.4rem;
 }
@@ -44,103 +43,189 @@ body{
 /* ------------------------HEADING  FONT-SIZE */
 h1,
 h2,
-h3{
+h3 {
   color: var(--color-heading-text);
   font-weight: 700;
 }
-h1{
+h1 {
   font-size: 2.5rem;
 }
-h2{
+h2 {
   font-size: 2.2rem;
 }
 /* HEADING & BODY FONT-SIZE----------------------  */
 
 /* -----------------------------------------BUTTON */
-  .btn{
-    outline: 0;
-    border: 0;
-    padding: 1.9rem 2.4rem;
-    border-radius: var(--border-radius-lg);
-    cursor: pointer;
-    color: var(--color-white);
-    text-align: center;
-    white-space: nowrap;
-    margin: 1rem 0;
-    font-size: 1.4rem;
-    font-weight: 700;
-  }
-  .btn--primary{
-    background-color: var(--color-primary);
-    border: 1px solid var(--color-primary);
-  }
-  .btn--secondary{
-    background-color: var(--color-secondary-dark);
-    border: 1px solid var(--color-secondary-dark);
-  }
-  .btn--block{
-    width: 100%;
-    font-size: 1.6rem;
-  }
+.btn {
+  outline: 0;
+  border: 0;
+  padding: 1.5rem 2.5rem;
+  border-radius: var(--border-radius-lg);
+  cursor: pointer;
+  color: var(--color-white);
+  text-align: center;
+  white-space: nowrap;
+  margin: 1rem 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.btn--primary {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+.btn--secondary {
+  background-color: var(--color-secondary-dark);
+  border: 1px solid var(--color-secondary-dark);
+}
+.btn--block {
+  width: 100%;
+  font-size: 1.6rem;
+  margin-top: 10rem;
+}
 
 /* END BUTTON------------------------------------ */
 
-
 /* -----------------------------------------BADGE */
-  .badge{
-    display: inline-flex;
-    border: 2px solid var(--color-primary);
-    border-radius: var(--border-radius-4xl);
-    padding: 1rem 1.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    font-size: 1.2rem;
-  }
-  .badge__number{
-    order: 1;
-    padding-right: 0.5rem;
-  }
-  .badge__text{
-    padding-left: 0.5rem;
-  }
-  .badge--primary{
-    background-color: var(--color-primary);
-    color: var(--color-white);
-  
-  }
-  .badge--secondary{
-    background-color: var(--color-white);
-    color: var(--color-primary);
-  
-
-  }
+.badge {
+  display: inline-flex;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius-4xl);
+  padding: 1rem 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
+}
+.badge__number {
+  order: 1;
+  padding-right: 0.5rem;
+}
+.badge__text {
+  padding-left: 0.5rem;
+}
+.badge--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+.badge--secondary {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
 /* END BADGE------------------------------------ */
 
+/* -------------------------------LIST COMPONENT */
+.list--tick .list__item {
+  background: url("/assets/images/Tick-Square.svg") no-repeat;
+  background-position: right center;
+  padding-right: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+/* END LIST COMPONENT--------------------------- */
+
+/* -----------------------------------------PLAN */
+.container{
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.block-plan{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,3 20px));
+  justify-content:center ;
+  gap: 10rem 6rem;
+  margin-top: 5rem;
+}
+.plan{
+  /* max-width: 450px; */
+  font-size: 1.8rem;
+  transition: all 0.3s ease-out;
+}
+.plan--popular{
+  transform: scale(1.1);
+}
+.plan--popular:hover{
+  transform: scale(1.15);
+}
+.plan:hover{
+  transform: scale(1.05);
+}
+.card{
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px 10px hsl(0,4%,95%);
+}
+.card__header,.card__body{
+   padding: 3rem 2.5rem;
+}
+.card__header{
+  color: var(--color-white);
+}
+.card--secondary .card__header{
+  background-color: var(--color-secondary-dark);
+
+}
+.card--primary .card__header{
+  background-color: var(--color-primary-light);
+}
+.plan__introduction{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.plan__price{
+  font-size: 3rem;
+}
+.plan__billing-cycle{
+  font-size: 1.4rem;
+}
+.plan__description{
+  display: block;
+  margin-top: 1.5rem;
+}
+
+/* END PLAN------------------------------------- */
+
+
+
+
+/* ----------------------------MEDIA FOR CONTENT */
+@media screen and (min-width: 768px) {
+  .list--tick .list__item {
+    margin-bottom: 2rem;
+  }
+  .block-plan{
+    grid-template-columns: repeat(3,1fr);  
+  }
+ 
+}
+/* END MEDIA FOR CONTENT------------------------ */
+
 /*-------------------------- MEDIA FOR FONT-SIZE */
-@media screen and (min-width: 768px){
-  body{
+@media screen and (min-width: 768px) {
+  body {
     font-size: 1.8rem;
   }
-  h1{
+  h1 {
     font-size: 5rem;
   }
-  h2{
+  h2 {
     font-size: 3.5rem;
   }
-  h3{
+  h3 {
     font-size: 2.8rem;
   }
-  .btn{
+  .btn {
     font-size: 1.6rem;
   }
-  .btn--block{
-    font-size: 2rem;
+  .btn--block {
+    font-size: 1.8rem;
   }
-  .badge{
-    font-size:1.4rem;
+  .badge {
+    font-size: 1.4rem;
+  }
+  .list {
+    font-size: 1.8rem;
   }
 }
 /* END MEDIA FOR FONT-SIZE---------------------- */
-
-
