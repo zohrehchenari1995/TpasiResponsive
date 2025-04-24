@@ -27,6 +27,7 @@ html {
   --color-white: #ffffff;
   --color-heading-text: #000000;
   --color-body-text: #333333;
+  --color-bacground-icon: #f2e4e4;
 
   --border-radius-xs: 2px;
   --border-radius-sm: 4px;
@@ -38,9 +39,10 @@ html {
 body {
   color: var(--color-body-text);
   font-size: 1.4rem;
+  line-height: 1.6;
 }
 
-/* ------------------------HEADING  FONT-SIZE */
+/* --------------------------------------HEADING  FONT-SIZE */
 h1,
 h2,
 h3 {
@@ -52,10 +54,11 @@ h1 {
 }
 h2 {
   font-size: 2.2rem;
+  margin-bottom: 2.5rem;
 }
-/* HEADING & BODY FONT-SIZE----------------------  */
+/* HEADING & BODY FONT-SIZE-------------------------------  */
 
-/* -----------------------------------------BUTTON */
+/* --------------------------------------------------BUTTON */
 .btn {
   outline: 0;
   border: 0;
@@ -83,9 +86,9 @@ h2 {
   margin-top: 10rem;
 }
 
-/* END BUTTON------------------------------------ */
+/* END BUTTON----------------------------------------------- */
 
-/* -----------------------------------------BADGE */
+/* ----------------------------------------------------BADGE */
 .badge {
   display: inline-flex;
   border: 2px solid var(--color-primary);
@@ -111,9 +114,9 @@ h2 {
   background-color: var(--color-white);
   color: var(--color-primary);
 }
-/* END BADGE------------------------------------ */
+/* END BADGE--------------------------------------------------- */
 
-/* -------------------------------LIST COMPONENT */
+/* ----------------------------------------------LIST COMPONENT */
 .list--tick .list__item {
   background: url("/assets/images/Tick-Square.svg") no-repeat;
   background-position: right center;
@@ -122,86 +125,276 @@ h2 {
   font-weight: 500;
   font-size: 1.4rem;
 }
-/* END LIST COMPONENT--------------------------- */
+/* END LIST COMPONENT------------------------------------------- */
 
-/* -----------------------------------------PLAN */
-.container{
+/* ---------------------------------------------------------PLAN */
+.container {
   max-width: 1140px;
   margin: 0 auto;
 }
-.block-plan{
+.block-plan {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,3 20px));
-  justify-content:center ;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 3 20px));
+  justify-content: center;
   gap: 10rem 6rem;
   margin-top: 5rem;
 }
-.plan{
+.plan {
   /* max-width: 450px; */
   font-size: 1.8rem;
   transition: all 0.3s ease-out;
 }
-.plan--popular{
+.plan--popular {
   transform: scale(1.1);
 }
-.plan--popular:hover{
+.plan--popular:hover {
   transform: scale(1.15);
 }
-.plan:hover{
+.plan:hover {
   transform: scale(1.05);
 }
-.card{
+.card {
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 0 20px 10px hsl(0,4%,95%);
+  box-shadow: 0 0 20px 10px hsl(0, 4%, 95%);
 }
-.card__header,.card__body{
-   padding: 3rem 2.5rem;
+.card__header,
+.card__body {
+  padding: 3rem 2.5rem;
 }
-.card__header{
+.card__header {
   color: var(--color-white);
 }
-.card--secondary .card__header{
+.card--secondary .card__header {
   background-color: var(--color-secondary-dark);
-
 }
-.card--primary .card__header{
+.card--primary .card__header {
   background-color: var(--color-primary-light);
 }
-.plan__introduction{
+.plan__introduction {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
 }
-.plan__price{
+.plan__price {
   font-size: 3rem;
 }
-.plan__billing-cycle{
+.plan__billing-cycle {
   font-size: 1.4rem;
 }
-.plan__description{
+.plan__description {
   display: block;
   margin-top: 1.5rem;
 }
 
-/* END PLAN------------------------------------- */
-
-
-
-
-/* ----------------------------MEDIA FOR CONTENT */
 @media screen and (min-width: 768px) {
   .list--tick .list__item {
     margin-bottom: 2rem;
   }
-  .block-plan{
-    grid-template-columns: repeat(3,1fr);  
+  .block-plan {
+    grid-template-columns: repeat(3, 1fr);
   }
- 
 }
-/* END MEDIA FOR CONTENT------------------------ */
+/* END PLAN-------------------------------------------------------- */
 
-/*-------------------------- MEDIA FOR FONT-SIZE */
+/*--------------------------------------------------------  FEATURE */
+.feature {
+  display: grid;
+}
+.feature__text {
+  margin-bottom: 2rem;
+}
+.feature .btn {
+  padding: 1.2rem 3rem;
+}
+.feature__image {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: #ccc;
+}
+.feature__image img {
+  width: 70%;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .feature {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .feature__image {
+    order: 2;
+    margin-bottom: 0;
+  }
+  .feature__image {
+    order: 1;
+  }
+  .feature__image img {
+    width: 100%;
+  }
+}
+
+/* END FEATURE------------------------------------------------------- */
+
+/* --------------------------------------------------------CONTACT-US */
+.contact-us {
+  display: grid;
+}
+.contact-us__map {
+  display: none;
+}
+
+/* contact-us icon */
+.icon-container img {
+  width: 25px;
+  height: 25px;
+}
+
+.icon-container {
+  display: inline-flex;
+  background-color: var(--color-bacground-icon);
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.contact-us__icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.contact-us__icons .icon-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.icon-holder .icon__title {
+  margin-left: 1rem;
+  display: block;
+  max-width: 250px;
+}
+
+/* contact-us__social */
+.contact-us__social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 1rem 0 2.5rem 0;
+  border-radius: 5px;
+}
+
+/* form */
+.contact-us__form{
+  margin-right: 0;
+}
+.form-wrapper {
+  height: 100%;
+  border: 1px solid #afaaaa;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.06);
+}
+.form-wrapper h3 {
+  margin: 4rem 0;
+  text-align: center;
+}
+.form-wrapper form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* height: 70%; */
+  padding: 3rem;
+}
+.form-wrapper input {
+  display: block;
+  border-radius: 39px;
+  outline: 0;
+  border: 0;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  padding: 1.2rem 1rem;
+  margin-bottom: 2rem;
+  font-family: "iranyekan";
+}
+.form-wrapper textarea {
+  outline: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  margin-bottom: 1.8rem;
+  font-family: "iranyekan";
+  padding: 0.5rem;
+  background-color: #f5f5f5;
+
+}
+::placeholder {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: "iranyekan";
+}
+.form-wrapper input:focus,
+.form-wrapper textarea:focus {
+  border: 1px solid var(--color-primary);
+}
+
+@media screen and (min-width: 768px) {
+  .contact-us {
+    grid-template-columns: 70fr 30fr;
+    grid-template-areas:
+      "address form"
+      "map form"
+      "icon form";
+  }
+  .contact-us__form {
+    grid-area: form;
+    margin-right: 2rem;
+  }
+  .contact-us__map {
+    grid-area: map;
+    display: block;
+  }
+  .contact-us__icons {
+    grid-area: address;
+  }
+  .contact-us__social {
+    grid-area: icon;
+  }
+  .contact-us__icons {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .contact-us__icons .icon-holder {
+    flex-direction: column;
+  }
+  .contact-us__icons .icon-holder.location {
+    order: 1;
+  }
+  .icon-holder .icon__title {
+    order: 2;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    max-width: 150px;
+  }
+  .contact-us__social {
+    justify-content: flex-end;
+    margin-bottom: 0;
+  }
+  .contact-us__social .social__holder {
+    margin-left: 2rem;
+  }
+  .contact-us__map img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* form */
+}
+/* CONTACT-US-------------------------------------------------------- */
+
+/*----------------------------------------------- MEDIA FOR FONT-SIZE */
 @media screen and (min-width: 768px) {
   body {
     font-size: 1.8rem;
@@ -211,6 +404,7 @@ h2 {
   }
   h2 {
     font-size: 3.5rem;
+    margin-bottom: 3.5rem;
   }
   h3 {
     font-size: 2.8rem;
@@ -228,4 +422,4 @@ h2 {
     font-size: 1.8rem;
   }
 }
-/* END MEDIA FOR FONT-SIZE---------------------- */
+/* END MEDIA FOR FONT-SIZE------------------------------------------- */
