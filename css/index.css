@@ -28,6 +28,9 @@ html {
   --color-heading-text: #000000;
   --color-body-text: #333333;
   --color-bacground-icon: #f2e4e4;
+  --color-menu-text: #545454;
+  --color-menu-humberger: #545454;
+  --color-border-bottom: #ccc;
 
   --border-radius-xs: 2px;
   --border-radius-sm: 4px;
@@ -287,7 +290,7 @@ h2 {
 }
 
 /* form */
-.contact-us__form{
+.contact-us__form {
   margin-right: 0;
 }
 .form-wrapper {
@@ -328,7 +331,6 @@ h2 {
   font-family: "iranyekan";
   padding: 0.5rem;
   background-color: #f5f5f5;
-
 }
 ::placeholder {
   font-size: 1.2rem;
@@ -393,6 +395,187 @@ h2 {
   /* form */
 }
 /* CONTACT-US-------------------------------------------------------- */
+
+/*----------------------------------------------------------- FOOTER */
+.main-footer .footer {
+  background-color: black;
+  color: white;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+.footer__item {
+  /* background-color: gold; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  margin-bottom: 2.5rem;
+}
+.footer__item a {
+  text-decoration: none;
+  color: var(--color-navbar);
+  font-size: 1.4rem;
+  /* margin-bottom: 0.5rem; */
+  display: blcok;
+}
+.footer__item h6 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+}
+
+/* footer enamad */
+.footer__item.enamad {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.footer__enamad {
+  background-color: var(--color-navbar);
+  border-radius: 10px;
+  padding: 1rem 0.5rem;
+  max-width: 86px;
+}
+.footer__item img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .main-footer .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-footer .footer .footer__item {
+    margin: 0 0 0 2.8rem;
+  }
+  .footer__enamad {
+    margin-left: 0.5rem;
+  }
+}
+
+/* END FOOTER------------------------------------------------------ */
+
+/*---------------------------------------------------- NAVBAR(MENU) */
+.main-header {
+  background-color: var(--color-navbar);
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+}
+.nav .nav__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  margin-top: 0.7rem;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.4s ease-out;
+}
+.nav__item {
+  margin-bottom: 0.7rem;
+  border-bottom: 1px solid var(--color-border-bottom);
+}
+.nav__item.cta {
+  border-bottom: 0;
+}
+.nav__item.cta a {
+  color: var(--color-white);
+  font-size: 1.2rem;
+}
+.nav__item .btn {
+  padding: 1rem 1.2rem;
+}
+.nav__item a {
+  text-decoration: none;
+  color: var(--color-menu-text);
+  display: block;
+  padding-bottom: 0.5rem 0;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.nav__item a:hover {
+  color: var(--color-primary);
+}
+
+/* menu hambergur toggler (nav__list ke inja bood vase tamizi code bala
+stye dadm behesh:max-height//opacity//transition)*/
+
+
+.nav.nav__expanded .nav__list{
+  max-height: 100vh;
+  opacity: 1;
+}
+.nav__toggler {
+  display: block;
+}
+.nav__toggler .bar{
+  background-color: var(--color-menu-humberger);
+  width: 25px;
+  height: 4px;
+  margin: 5px 0;
+  border-radius: 5px;
+  transition: all 0.4s ease-out;
+}
+.nav.nav__expanded .bar-one{
+  transform: rotate(-45deg) translate(-10px,5px);
+  margin: 3px 0;
+}
+.nav.nav__expanded .bar-two{
+  transform: translatex(-1px);
+  opacity: 0;
+}
+.nav.nav__expanded .bar-three{
+  transform: rotate(45deg) translate(-8px,-3px);
+  margin: 2px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .nav{
+    padding: 0 2rem;
+  }
+  .nav__toggler {
+    display: none;
+  }
+  /* opacity & max-height vase menu hamber hast dar halate desktop */
+  .nav .nav__list {
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    opacity: 1;
+    max-height: 100%;
+  }
+  .nav__item {
+    margin-right: 2.5rem;
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    border-bottom: 0;
+  }
+  .nav__item .btn {
+    padding: 0.6rem 1.8rem;
+    margin-bottom: 1.3rem;
+  }
+ 
+
+}
+/* END NAVBAR(MENU)-------------------------------------------------- */
+
+
+
+
+
+
+
+
+
 
 /*----------------------------------------------- MEDIA FOR FONT-SIZE */
 @media screen and (min-width: 768px) {
