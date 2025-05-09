@@ -31,6 +31,7 @@ html {
   --color-menu-text: #545454;
   --color-menu-humberger: #545454;
   --color-border-bottom: #ccc;
+  --color-border: #f2efef;
 
   --border-radius-xs: 2px;
   --border-radius-sm: 4px;
@@ -208,7 +209,7 @@ h2 {
   padding: 2rem;
   /* gap: 2rem; */
 }
-.feature__title{
+.feature__title {
   font-size: 1.4rem;
 }
 .feature__text {
@@ -227,13 +228,11 @@ h2 {
   height: auto;
 }
 
-
-
 @media screen and (min-width: 768px) {
   .feature {
     grid-template-columns: repeat(2, 1fr);
   }
-  .feature__title{
+  .feature__title {
     font-size: 1.8rem;
   }
 
@@ -245,16 +244,16 @@ h2 {
     width: 100%;
     height: 400px;
   }
-  .feature .mac img{
+  .feature .mac img {
     margin-left: 10rem;
   }
-  .charge .feature__image{
+  .charge .feature__image {
     order: -1;
   }
-  .feature.charge .feature__detail{
+  .feature.charge .feature__detail {
     order: 1;
   }
-  .feature__text{
+  .feature__text {
     text-align: justify;
   }
 }
@@ -292,11 +291,9 @@ h2 {
   flex-direction: column;
   align-items: flex-end;
   background-color: var(--color-white);
-  box-shadow: 0 0 20px 2px rgba(0,0,0,0.06);
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.06);
   margin: 2rem 0;
   padding: 1rem;
-
-
 }
 .contact-us__icons .icon-holder {
   display: flex;
@@ -320,7 +317,7 @@ h2 {
   margin: 1rem 0 2.5rem 0;
   border-radius: 5px;
   background-color: var(--color-white);
-  box-shadow: 0 0 20px 2px rgba(0,0,0,0.06);
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.06);
   margin: 2rem 0;
   height: 80px;
 }
@@ -546,15 +543,14 @@ h2 {
 /* menu hambergur toggler (nav__list ke inja bood vase tamizi code bala
 stye dadm behesh:max-height//opacity//transition)*/
 
-
-.nav.nav__expanded .nav__list{
+.nav.nav__expanded .nav__list {
   max-height: 100vh;
   opacity: 1;
 }
 .nav__toggler {
   display: block;
 }
-.nav__toggler .bar{
+.nav__toggler .bar {
   background-color: var(--color-menu-humberger);
   width: 25px;
   height: 4px;
@@ -562,21 +558,21 @@ stye dadm behesh:max-height//opacity//transition)*/
   border-radius: 5px;
   transition: all 0.4s ease-out;
 }
-.nav.nav__expanded .bar-one{
-  transform: rotate(-45deg) translate(-10px,5px);
+.nav.nav__expanded .bar-one {
+  transform: rotate(-45deg) translate(-10px, 5px);
   margin: 3px 0;
 }
-.nav.nav__expanded .bar-two{
+.nav.nav__expanded .bar-two {
   transform: translatex(-1px);
   opacity: 0;
 }
-.nav.nav__expanded .bar-three{
-  transform: rotate(45deg) translate(-8px,-3px);
+.nav.nav__expanded .bar-three {
+  transform: rotate(45deg) translate(-8px, -3px);
   margin: 2px 0;
 }
 
 @media screen and (min-width: 768px) {
-  .nav{
+  .nav {
     padding: 0 2rem;
   }
   .nav__toggler {
@@ -600,14 +596,11 @@ stye dadm behesh:max-height//opacity//transition)*/
     padding: 0.6rem 1.8rem;
     margin-bottom: 1.3rem;
   }
- 
-
 }
 /* END NAVBAR(MENU)-------------------------------------------------- */
 
-
 /*------------------------------------------------------- BANNER SITE */
-.hero-section{
+.hero-section {
   width: 100%;
   height: 700px;
   font-family: "iranyekan";
@@ -615,83 +608,82 @@ stye dadm behesh:max-height//opacity//transition)*/
   margin-top: 0;
   /* margin-bottom: 25px; */
 }
-.hero-section img{
+.hero-section img {
   width: 100%;
   height: 700px;
   object-fit: cover;
-  filter: contrast(50%)
+  filter: contrast(50%);
 }
-.hero-section img:hover{
- filter: contrast(150%);
+.hero-section img:hover {
+  filter: contrast(150%);
 }
-.hero-section .hero-phone{
+.hero-section .hero-phone {
   display: none;
 }
-.hero-wrapper{
+.hero-wrapper {
   position: absolute;
   top: 0;
   left: 0;
-  width:100%;
+  width: 100%;
   height: 570px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 30vh;
 }
-.intro-btn{
+.intro-btn {
   border-radius: 12px;
   padding: 16px;
-  background-image:linear-gradient(
+  background-image: linear-gradient(
     51deg,
-    rgba(23,26,60,0.7) 5%,
-    rgba(23,26,60,0.3) 95%
+    rgba(23, 26, 60, 0.7) 5%,
+    rgba(23, 26, 60, 0.3) 95%
   );
   display: flex;
   flex-direction: column;
   width: 270px;
   white-space: nowrap;
-
 }
-.intro-btn h1{
+.intro-btn h1 {
   font-size: 2rem;
   color: var(--color-white);
 }
-.intro-btn h2{
+.intro-btn h2 {
   font-size: 1.8rem;
   color: var(--color-white);
   margin-bottom: 3rem;
 }
-.intro-btn__passenger{
+.intro-btn__passenger {
   background-color: var(--color-white);
   border-radius: 12px;
   margin-bottom: 2rem;
   padding: 14px;
   width: 220px;
 }
-.intro-btn__passenger.bac-gradiant{
+.intro-btn__passenger.bac-gradiant {
   background: transparent;
   border: 1px solid var(--color-white);
   color: var(--color-white);
 }
-.intro-wrapper{
+.intro-wrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-.intro-btn__passenger{
+.intro-btn__passenger {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.intro-btn__passenger p{
+.intro-btn__passenger p {
   font-size: 1.4rem;
 }
-@media screen and (min-width:768px) {
-  .hero-section{
+@media screen and (min-width: 768px) {
+  .hero-section {
     margin-top: 0;
   }
 
-   .hero-section .hero-phone{
+  .hero-section .hero-phone {
     display: block;
     width: 420px;
     height: auto;
@@ -699,28 +691,28 @@ stye dadm behesh:max-height//opacity//transition)*/
     left: -5%;
     bottom: -60%;
     filter: contrast(150%);
-   }
-  .hero-wrapper{
+  }
+  .hero-wrapper {
     /* justify-content: flex-start; */
     position: absolute;
     right: 0;
     left: 500px;
     margin-top: 50px;
   }
-  .intro-wrapper{
+  .intro-wrapper {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
   }
-  .intro-btn{
+  .intro-btn {
     width: 530px;
     padding: 25px;
     border-radius: 20px;
   }
-  .intro-btn h1{
+  .intro-btn h1 {
     font-size: 3.5rem;
   }
-  .intro-btn h2{
+  .intro-btn h2 {
     font-size: 2.4rem;
   }
 }
@@ -728,19 +720,18 @@ stye dadm behesh:max-height//opacity//transition)*/
 /* END BANNER SITE----------------------------------------------- */
 
 /* ------------------------------------------------------SERVICES */
-.services{
+.services {
   transition: all 0.2s;
 }
-.services__tabs{
+.services__tabs {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   overflow: auto;
   padding: 5px 0 15px;
   transition: all 0.5s;
-
 }
-.services__tabs a{
+.services__tabs a {
   display: block;
   text-decoration: none;
   color: var(--color-menu-text);
@@ -749,24 +740,23 @@ stye dadm behesh:max-height//opacity//transition)*/
   align-items: center;
   max-width: 100px;
 }
-.services__tabs .tab p{
+.services__tabs .tab p {
   font-size: 1.2rem;
   font-family: "iranyekan";
   font-weight: bold;
   margin-top: 1rem;
-  
 }
-.services__tabs .tab img{
+.services__tabs .tab img {
   max-width: 85px;
 }
-.services__tabs .tab{
+.services__tabs .tab {
   opacity: 0.5;
   transition: all 0.2s ease-out;
 }
-.services__tabs .tab:hover{
+.services__tabs .tab:hover {
   opacity: 1;
 }
-.services__title{
+.services__title {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 20px;
@@ -774,94 +764,99 @@ stye dadm behesh:max-height//opacity//transition)*/
 }
 
 /* feature in services */
-.services .feature{
-  padding-right: 2.5rem ;
+.services .feature {
+  padding-right: 2.5rem;
 }
-.services .feature__title{
+.services .feature__title {
   margin: 1.5rem 0;
 }
-.services .feature__image{
+.services .feature__image {
   display: none;
 }
-.tab-content{
+.tab-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.feature__detail{
+.feature__detail {
   width: 100%;
 }
-.tab-content{
+.tab-content {
   display: none;
 }
-.tab-content.active{
+.tab-content.active {
   display: flex;
 }
-.tab.active{
+.tab.active {
   opacity: 1;
 }
 
-@media screen and (min-width:768px){
-  .services__tabs .tab p{
+@media screen and (min-width: 768px) {
+  .services__tabs .tab p {
     font-size: 1.5rem;
     margin-bottom: 10px;
   }
-  .services__tabs .tab img{
+  .services__tabs .tab img {
     width: 100%;
   }
-  .services__title{
+  .services__title {
     font-size: 3.5rem;
     margin-bottom: 30px;
   }
-  .services .feature__image{
+  .services .feature__image {
     display: block;
   }
-  .feature__detail{
+  .feature__detail {
     width: 50%;
   }
-  .tab-content .feature__image{
+  .tab-content .feature__image {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .tab-content .feature__image img{
+  .tab-content .feature__image img {
     margin-top: 20px;
   }
 }
 /* END SERVICES------------------------------------------------------ */
- 
+
 /*----------------------------------------------------- TRAVEL SLIDES */
-.travell__slides{
+.travell__title h2{
+  margin-top: 10rem;
+}
+.travell__slides {
   display: flex;
   justify-content: space-between;
   align-items: center;
   overflow-x: auto;
   padding-bottom: 1rem;
+  margin-top: 7rem;
 }
-.travell__slides{
+
+.travell__slides {
   scrollbar-width: thin;
 }
-.travell__slide{
+.travell__slide {
   flex: 0 0 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.travell__slide:not(:last-child){
+.travell__slide:not(:last-child) {
   margin-left: 2rem;
 }
-.travell__img{
+.travell__img {
   width: 100%;
   height: 200px;
 }
-.travell__slide img{
+.travell__slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 32px;
 }
 
-.slide__detail{
+.slide__detail {
   background-color: var(--color-white);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
   border-radius: 32px;
@@ -869,25 +864,25 @@ stye dadm behesh:max-height//opacity//transition)*/
   transform: translateY(-60px);
   width: 85%;
 }
-.slide__header{
+.slide__header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-.slide__header p{
+.slide__header p {
   font-size: 1.2rem;
   margin-right: 0.7rem;
 }
-.slide__header .badge{
+.slide__header .badge {
   font-size: 1.2rem;
   padding: 0.1rem 1.2rem;
 }
-.slide__detail .slide__title{
+.slide__detail .slide__title {
   font-size: 1.4rem;
   font-weight: bold;
   margin-top: 1rem;
 }
-.slide__detail .slide__icons{
+.slide__detail .slide__icons {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -895,16 +890,83 @@ stye dadm behesh:max-height//opacity//transition)*/
   color: var(--color-border-bottom);
 }
 
-.slide__detail .icons__trashEdit i{
+.slide__detail .icons__trashEdit i {
   margin-left: 8rem;
 }
 
 /* END TRAVEL SLIDES------------------------------------------------- */
 
+/*-------------------------------------------------------- ACCORDION */
+.accordion__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border-bottom: 2px solid var(--color-border);
+}
+.accordion__heading {
+  margin-bottom: 0;
+  color: var(--color-menu-text);
+  font-size: 2rem;
+}
+
+.accordion__content {
+  border-radius: var(--border-radius-md);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  padding: 0 2rem;
+}
+
+.accordion__content-detial{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+.accordion__content-detial img{
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+
+}
 
 
+.accordion.accordion__expanded .accordion__content {
+  max-height: 100vh;
+  opacity: 1;
+}
+.accordion.accordion__expanded .accordion__header {
+  border-bottom: 0;
+}
+.accordion__header .icon {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  font-size: 1.4rem;
+  transition: all 0.3s ease-out;
+}
+.accordion.accordion__expanded .icon {
+  transform: rotate(-90deg);
+}
+.accordion-wrapper {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  border: 2px solid var(--color-border);
+  box-shadow: 0 9px 12px rgba(0, 0, 0, 0.05);
+  margin: 10rem 0;
+}
+.accordion__intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid var(--color-border);
+  padding: 1.5rem 2rem;
+  color: var(--color-primary);
+}
 
-
+/* END ACCORDION---------------------------------------------------- */
 
 /*----------------------------------------------- MEDIA FOR FONT-SIZE */
 @media screen and (min-width: 768px) {
@@ -933,13 +995,12 @@ stye dadm behesh:max-height//opacity//transition)*/
   .list {
     font-size: 1.8rem;
   }
-
 }
 /* END MEDIA FOR FONT-SIZE------------------------------------------- */
 
-.block{
+.block {
   padding: 3.5rem 3rem;
 }
-.block-heading{
+.block-heading {
   margin-top: 4rem;
 }

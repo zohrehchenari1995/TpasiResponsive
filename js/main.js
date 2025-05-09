@@ -1,15 +1,17 @@
+// navbar(برای اینکه اول کدهای اچ تی ام ال اجرا بشه و بعدش کدهای جاوااسکریپت ار دام لوودد استفاده کردم)
 
-// navbar
-const navToggler= document.querySelector(".nav__toggler");
-const navbar= document.querySelector(".nav");
-navToggler.addEventListener("click",(e)=>{
-  console.log("clicked");
-  navbar.classList.toggle("nav__expanded");
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   const navToggler = document.querySelector(".nav__toggler");
+//   const navbar = document.querySelector(".nav");
+  
+//   if (navToggler && navbar) {
+//     navToggler.addEventListener("click", () => {
+//       navbar.classList.toggle("nav__expanded");
+//     });
+//   }
+// });
 
-
-// services
-
+//----------------------------------------------------- services
 
 const tabs = document.querySelectorAll(".tab");
 const tabContents = document.querySelectorAll(".tab-content");
@@ -27,11 +29,26 @@ tabs.forEach((tab) => {
   });
 });
 
+//--------------------------------------------------- ACCORDION
+
+const accordionHeader = document.querySelectorAll(".accordion__header");
+accordionHeader.forEach((item) => {
+  item.addEventListener("click", (e) => {
+   const accordion = item.closest(".accordion");
+   console.log(accordion);
+     accordion.classList.toggle("accordion__expanded");
+
+    })
+  });
+
+
+
+
 // const accordionHeaders = document.querySelectorAll(".accordion__header");
-// const accordion = document.querySelector(".accordion");
-// accordionHeaders.forEach((item) => {
-//   item.addEventListener("click", (e) => {
-//     console.log(e.target.parentElement);
-//     e.target.parentElement.classList.toggle("accordion__expanded");
+
+// accordionHeaders.forEach((header) => {
+//   header.addEventListener("click", () => {
+//     const accordion = header.closest(".accordion");
+//     accordion.classList.toggle("accordion__expanded");
 //   });
 // });
